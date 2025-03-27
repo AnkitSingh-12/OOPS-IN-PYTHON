@@ -6,3 +6,13 @@ class Bank:
     bank_branch='kizikistan' 
 ankit=Bank()# WE ARE CALLING OBJECT
 rohit=Bank()# WE ARE CALLING OBJECT
+
+
+
+#### generic method###   
+
+
+# # ACESSING GENERIC PROPERTIES BY USING CLASS
+     ## className.classvariablename
+print(Bank.bank_name)
+print(Bank.bank_name)
