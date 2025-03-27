@@ -34,3 +34,14 @@ Bank.bank_roi=4
 print(Bank.bank_name)
 print(ankit.bank_roi)
 print(rohit.bank_roi)
+
+
+#   #   # MODIFYING GENERIC PROPERTIES BY USING OBJECT
+    # ObjectName.classVariableName=New Value
+
+print('modifying by object')
+ankit.bank_roi=3
+rohit.bank_roi=3
+print(Bank.bank_roi)
+print(ankit.bank_roi)
+print(rohit.bank_roi)
