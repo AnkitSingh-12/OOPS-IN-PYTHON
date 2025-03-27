@@ -51,7 +51,14 @@ print(rohit.bank_roi)
 ######  CREATING NEW GENERIC PROPERTIES BY USING CLASS 
     ### className.New classVariableName=value
 
+
 Bank.bank_mobile=9876543210
 print(Bank.bank_mobile)
 print(ankit.bank_mobile)
 print(rohit.bank_mobile)
+
+
+
+
+######  CREATING NEW GENERIC PROPERTIES BY USING bject
+    ### we cannot create new generic properties by using object
