@@ -16,3 +16,10 @@ rohit=Bank()# WE ARE CALLING OBJECT
      ## className.classvariablename
 print(Bank.bank_name)
 print(Bank.bank_name)
+
+
+
+# # ACESSING GENERIC PROPERTIES BY USING OBJECT
+     # OBJECTName.classvariablename
+print(ankit.bank_name)
+print(rohit.bank_name)
