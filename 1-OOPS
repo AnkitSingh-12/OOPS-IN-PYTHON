@@ -1,1 +1,8 @@
+### class###
 
+class Bank:
+    bank_name='sbi'
+    bank_roi=5
+    bank_branch='kizikistan' 
+ankit=Bank()# WE ARE CALLING OBJECT
+rohit=Bank()# WE ARE CALLING OBJECT
