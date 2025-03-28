@@ -5,7 +5,7 @@ class Bank:
     bank_name='pnb'
     bank_roi=5
     bank_branch='japan' 
-    def __init__(self,na,ac,cb):
+    def __init__(self,na,ac,cb):# constructor started
         self.cname=na
         self.caccount=ac
         self.cbalnce=cb
