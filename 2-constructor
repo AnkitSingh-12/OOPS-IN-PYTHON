@@ -1,1 +1,16 @@
+################# constructor #########################
+
+
+class Bank:
+    bank_name='pnb'
+    bank_roi=5
+    bank_branch='japan' 
+    def __init__(self,na,ac,cb):
+        self.cname=na
+        self.caccount=ac
+        self.cbalnce=cb
+ankit=Bank('ankit',98321,10000)
+print(ankit)
+abhi=Bank('abhi',9877728,20000)
+print(abhi)
 
