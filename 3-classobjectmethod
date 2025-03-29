@@ -1,1 +1,26 @@
 
+#################### Behaviour of method#############################
+class Bank:
+    bank_name='pnb'
+    bank_roi=5
+    bank_branch='punjab' 
+    def __init__(self,na,ac,cb):
+        self.cname=na
+        self.caccount=ac
+        self.cbalnce=cb
+    def customer_details(self):
+        print(f'name of the customer is {self.cname}')
+        print(f'name of the customer is {self.caccount}')
+        print(f'name of the customer is {self.cbalnce}')
+    def withdraw(self):
+        amount=int(input('enter the amount'))
+        if self.cbalnce>=amount:
+            self.cbalnce-=amount
+            print(f'{self.cname} ur money is withdrawn sucessfull')
+        else:
+            print('insufficient balance')
+        print(f'available balnce is{self.cbalnce}')
+    def deposit(self):
+        amount=int(input('enter the amount'))
+        self.cbalnce+=amount
+        print('deposit is sucessfull')
