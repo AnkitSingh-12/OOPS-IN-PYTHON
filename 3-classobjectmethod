@@ -24,3 +24,13 @@ class Bank:
         amount=int(input('enter the amount'))
         self.cbalnce+=amount
         print('deposit is sucessfull')
+ankit=Bank('ankit',9874,10000)
+#bank.__init__(y111,'ankit',98754,10000)
+butterfly=Bank('butterfly',87777,20000)
+#bank.__init__(y222,'butterfly',98754,10000)
+butterfly.customer_details()
+#bank.customer_details(butterfly)
+butterfly.withdraw()
+#bank.withdraw(butterfly)
+butterfly.deposit()  
+#bank.deposit(butterfly)
