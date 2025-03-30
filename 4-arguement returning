@@ -37,3 +37,26 @@ def wish():
     print('ended wish')
 result=outer(wish)
 print(result)
+
+
+
+
+
+#passing function address  as value for arguement and returning 
+
+def outer(arg):
+    print('outer is started')
+    print(arg)
+    def inner():
+        print('inner has started')
+        arg()
+        print('inner has ended')
+
+    print('outer is ended')
+    return inner
+def wish():
+    print('started wish')
+    print('ended wish')
+result=outer(wish)
+print(result)
+result()
