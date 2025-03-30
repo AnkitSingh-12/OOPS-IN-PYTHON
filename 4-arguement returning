@@ -17,3 +17,23 @@ def wish():
     print('ended wishes')
 result=outer(wish)
 print(result)
+
+
+
+#pasiing function address as value for arguement and returing 
+
+def outer(arg):
+    print('outer is started')
+    print(arg)
+    def inner():
+        print('inner has started')
+        arg()
+        print('inner has ended')
+    inner()
+    print('outer is ended')
+    return 200
+def wish():
+    print('started wish')
+    print('ended wish')
+result=outer(wish)
+print(result)
