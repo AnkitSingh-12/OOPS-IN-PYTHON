@@ -1,0 +1,23 @@
+################ DECORATORS ##############
+# Decorators example by using outer and wish funtion 
+
+
+def outer(arg):
+    print('outer is started')
+    print(arg)
+    def inner():
+        print('inner has started')
+        arg()
+        print('inner has ended')
+
+    print('outer is ended')
+    return inner
+@outer
+def wish():
+    print('started wish')
+    print('ended wish')
+print('wish value is',wish)
+wish()
+
+
+#-----------------------------------------------------------------------------#
