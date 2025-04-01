@@ -21,3 +21,20 @@ wish()
 
 
 #-----------------------------------------------------------------------------#
+#decoraotrs example by using brother and sister function   
+
+def brother (arg):
+    def inner():
+        print('brother attempted the call')
+        print('connecting to sister')
+        arg()
+        print('brother ended the call')
+    return inner
+@brother
+def sister():
+    print('started speaking to sister ')
+    print('ended speaking to sister ')
+sister()
+
+
+#-----------------------------------------------------------------------------#
