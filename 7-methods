@@ -1,1 +1,31 @@
 
+## find the decoration using the fibanacci series 
+
+def timeDecorator(arg):
+   def inner():
+        import time
+        T1=time.time()
+        arg()
+        T2=time.time()
+        print('Time taken for doing the task is',T2-T1)     
+   return inner 
+@timeDecorator#fibo=timeDecorator(fiboFaddress)#fibo=InnerFaddress
+def fibo():
+    a=int(input('enter first value'))#2
+    b=int(input('enter second value'))#3
+    n=int(input('enter HOW values u need'))#10
+    if n==1:
+        print(a)
+    elif n==2:
+        print(a,b)
+    else:
+        print(a,b)
+        for i in range(n-2):
+            c=a+b
+            print(c)
+            a,b=b,c
+fibo()
+
+
+
+#-----------------------------------------------------------------------------------#
