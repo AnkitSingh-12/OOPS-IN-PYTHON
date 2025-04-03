@@ -12,3 +12,14 @@ class Address():
         print(f'City name is {self.city}')
         print(f'State name is {self.state}')
         print(f'Country name is {self.country}')
+# Creating Address objects
+bangloreobject = Address('Bangalore', 'Karnataka', 'India')
+chennaiobject = Address('Chennai', 'Tamil Nadu', 'India')
+
+# Student class
+class Student:
+    def __init__(self, sn, sa, sid, sad):
+        self.sname = sn  # Student Name
+        self.sage = sa   # Student Age
+        self.sid = sid   # Student ID
+        self.sad = sad   # Student Address (Address object)
