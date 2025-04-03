@@ -1,1 +1,14 @@
+################### Agregation Method #################    
 
+
+# Address class
+class Address():
+    def __init__(self, c, s, co):
+        self.city = c
+        self.state = s
+        self.country = co
+
+    def display_address(self):
+        print(f'City name is {self.city}')
+        print(f'State name is {self.state}')
+        print(f'Country name is {self.country}')
