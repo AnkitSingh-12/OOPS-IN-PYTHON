@@ -23,3 +23,18 @@ class Student:
         self.sage = sa   # Student Age
         self.sid = sid   # Student ID
         self.sad = sad   # Student Address (Address object)
+
+    def student_info(self):
+        print(f'Name of student is {self.sname}')
+        print(f'Age of student is {self.sage}')
+        print(f'Student ID is {self.sid}')  
+        print(f'Address of student is:')
+        #self.sad=y111(bangloreAddressclass object)
+        self.sad.display_address() 
+
+# Creating Student objects with Address association
+supriya = Student('Supriya', 25, 1234, bangloreobject)
+supriya.student_info()
+
+ankit = Student('Ankit', 24, 2341, bangloreobject)
+ankit.student_info()
