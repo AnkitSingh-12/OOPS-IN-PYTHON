@@ -14,3 +14,25 @@ class Car:
     def stop(self):
         print(f'{self.cname} is stopped')
 
+
+class Driver():
+    def __init__(self,dn,dexp,di):
+        self.dname=dn
+        self.dexperience=dexp
+        self.did=di
+
+
+        cn=input('enter car name ')
+        cno=input('enter car number')
+        cm=input('enter the model')
+
+        CCO=Car(cn,cno,cm)
+        self.dcar=CCO
+    def driving(self):
+        print('driver into a car')
+        self.dcar.start
+        self.dcar.accelrate
+        self.dcar.stop
+        print('driver come out of  a car')
+Ankit=Driver('Ankit',1234,2)
+Ankit.driving()
