@@ -1,1 +1,16 @@
+class Car:
+    def __init__(self,cn,cno,cm):
+        self.cname=cn
+        self.cnumber=cno
+        self.cmodel=cm
+    # def display_info(self):
+    #     print(f'name of the car{self.cname}')
+    #     print(f'number of the car{self.cnumber}')
+    #     print(f'cmodel of the car{self.cmodel}')
+    def start(self):
+        print(f'{self.cname} is started')
+    def accelerate(self):
+        print(f'{self.cname} is accelerated')
+    def stop(self):
+        print(f'{self.cname} is stopped')
 
