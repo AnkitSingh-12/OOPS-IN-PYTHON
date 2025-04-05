@@ -23,3 +23,17 @@ class Team():
             
             PCO = Players(pn, pa, pc, pnom, pr, pw)# Create Player object and add to team
             self.TPL.append(PCO)
+    def getmaxrunScorer(self):
+        mrs = self.TPL[0]  
+        for po in self.TPL:
+            if po.runs > mrs.runs:  # Compare runs
+                mrs = po
+        return mrs.pname  
+
+   
+    def getmaxwicketsTaker(self):
+        mwt = self.TPL[0] 
+        for po in self.TPL:
+            if po.pwickets > mwt.pwickets:  # Compare wickets
+                mwt = po
+        return mwt.pname  
