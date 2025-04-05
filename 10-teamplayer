@@ -1,1 +1,8 @@
-
+class Players():
+    def __init__(self, pn, pa, pc, pnom, pr, pw):
+        self.pname = pn        # Player name
+        self.page = pa         # Player age
+        self.pcountry = pc     # Player country
+        self.pnumbermatches = pnom  # Number of matches played
+        self.runs = pr         # Total runs
+        self.pwickets = pw     # Total wickets
