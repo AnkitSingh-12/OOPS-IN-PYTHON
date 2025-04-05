@@ -37,3 +37,7 @@ class Team():
             if po.pwickets > mwt.pwickets:  # Compare wickets
                 mwt = po
         return mwt.pname  
+
+india = Team(2)
+print("Highest Run Scorer:", india.getmaxrunScorer())
+print("Highest Wicket Taker:", india.getmaxwicketsTaker())
