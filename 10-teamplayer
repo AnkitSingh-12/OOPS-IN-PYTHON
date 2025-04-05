@@ -6,3 +6,20 @@ class Players():
         self.pnumbermatches = pnom  # Number of matches played
         self.runs = pr         # Total runs
         self.pwickets = pw     # Total wickets
+class Team():
+    def __init__(self, TNOP):
+        self.Tnumberplayers = TNOP  # Number of players in team
+        self.TPL = []  # List to store player objects creating empty list
+
+       
+        for i in range(self.Tnumberplayers):
+            pn = input('Enter player name: ')
+            pa = int(input('Enter player age: '))
+            pc = input('Enter player country: ')
+            pnom = int(input('Enter number of matches: '))
+            pr = int(input('Enter player runs: '))
+            pw = int(input('Enter player wickets: '))
+
+            
+            PCO = Players(pn, pa, pc, pnom, pr, pw)# Create Player object and add to team
+            self.TPL.append(PCO)
