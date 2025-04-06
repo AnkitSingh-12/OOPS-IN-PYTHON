@@ -39,3 +39,15 @@ print(Parent.house)
 print(PCO.house)
 print(Child.house)
 print(CCO.house)
+
+
+
+
+#modifying property by using child class object 
+#only that particular object will get affected
+
+CCO.house='1BHK'
+print(Parent.house)
+print(PCO.house)
+print(Child.house)
+print(CCO.house)
