@@ -1,0 +1,9 @@
+class Parent:
+    house='2bhk'
+    bike='chetak'
+class Child(Parent):
+    bike='KTM'
+    money=20000
+
+PCO=Parent()
+CCO=Child()
