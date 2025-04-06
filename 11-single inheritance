@@ -7,3 +7,11 @@ class Child(Parent):
 
 PCO=Parent()
 CCO=Child()
+
+# modiyfying properties by using parent class 
+
+Parent.house='1bhk'
+print(Parent.house)
+print(PCO.house)
+print(Child.house)
+print(CCO.house)
