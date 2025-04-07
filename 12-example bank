@@ -32,3 +32,26 @@ class Bank_v1:
         print(f'customer age: {self.cage}')
         print(f'customer account number: {self.caccount}')
         print(f'customer balance: {self.cbal}')
+
+    def withdraw(self):
+        amount = self.get_int_value()
+        if self.cbal >= amount:
+            self.cbal -= amount
+            print(f'{self.cname}, your withdrawal of {amount} was successful.')
+        else:
+            print('Insufficient balance.')
+        print(f'Available balance: {self.cbal}')
+
+
+class Bank_v2(Bank_v1):
+    bank_branch = 'Bangalore'
+
+    def deposit(self):
+        amount = self.get_int_value()
+        self.cbal += amount
+        print('deposit successful.')
+    
+
+
+ankit = Bank_v2('Ankit', 30, 87772, 20000)
+ankit.withdraw()
