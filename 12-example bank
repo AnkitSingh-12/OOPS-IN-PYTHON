@@ -1,1 +1,11 @@
+class Bank_v1:
+    bank_name = 'SBI'
+    bank_ifsc = 'SBIN123'
+    bank_roi = 6
+    bank_branch = 'Hyderabad'
 
+    def __init__(self, na, a, ac, cb):
+        self.cname = na
+        self.cage = a
+        self.caccount = ac
+        self.cbal = cb
