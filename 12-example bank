@@ -9,3 +9,14 @@ class Bank_v1:
         self.cage = a
         self.caccount = ac
         self.cbal = cb
+     @staticmethod
+     def get_int_value():
+        integer=int(input("Enter amount: "))
+        return integer
+
+    @classmethod
+    def modify_roi(cls):
+        print(cls)
+        newroi = cls.get_int_value()
+        cls.bank_roi = newroi
+        print('roi has been changed successfully')
