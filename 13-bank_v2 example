@@ -8,4 +8,8 @@ class Bank_v1:
         self.cage=a
         self.caccount=ac
         self.cbal=cb
-
+    @staticmethod
+    def get_int_value():
+        integer=int(input('enter integer value:'))
+        return integer
+    
