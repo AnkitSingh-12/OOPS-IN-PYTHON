@@ -3,3 +3,9 @@ class Bank_v1:
     bank_ifsc='sbin00092'
     bank_roi=6
     bank_branch='hyderbad'
+    def __init__(self,na,a,ac,cb):
+        self.cname=na
+        self.cage=a
+        self.caccount=ac
+        self.cbal=cb
+
