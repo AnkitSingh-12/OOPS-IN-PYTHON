@@ -1,1 +1,5 @@
-
+class Bank_v1:
+    bank_name='SBI'
+    bank_ifsc='sbin00092'
+    bank_roi=6
+    bank_branch='hyderbad'
