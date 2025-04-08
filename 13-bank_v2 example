@@ -13,3 +13,10 @@ class Bank_v1:
         integer=int(input('enter integer value:'))
         return integer
     
+    @classmethod
+    def modify_roi(cls):
+        print(cls)
+        newroi=cls.get_int_value()
+        cls.bank_roi=newroi
+        print('roi is changed')
+     
