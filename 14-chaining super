@@ -1,4 +1,3 @@
-
 class Bank_v1:
     bank_name='SBI'
     bank_ifsc='sbin00092'
@@ -9,4 +8,33 @@ class Bank_v1:
         self.cage=a
         self.caccount=ac
         self.cbal=cb
-    
+    @staticmethod
+    def get_int_value():
+        integer=int(input('enter integer value:'))
+        return integer
+    @classmethod
+    def modify_roi(cls):
+        print(cls)
+        newroi=cls.get_int_value()
+        cls.bank_roi=newroi
+        print('roi is changed')
+    @classmethod
+    def bank_details(cls):    
+        print(f'name of bank: {cls.bank_name}')
+        print(f'roi of bank: {cls.bank_roi}')
+        print(f'ifsc of bank: {cls.bank_ifsc}')
+        print(f'branch of bank: {cls.bank_branch}')
+    def customer_details(self):
+        print(f'customer name: {self.cname}')
+        print(f'customer age: {self.cage}')
+        print(f'customer account number: {self.caccount}')
+        print(f'customer balance: {self.cbal}')
+
+    def withdraw(self):
+        amount = self.get_int_value()
+        if self.cbal >= amount:
+            self.cbal -= amount
+            print(f'{self.cname}, your withdrawal of {amount} was successful.')
+        else:
+            print('Insufficient balance.')
+        print(f'Available balance: {self.cbal}')
