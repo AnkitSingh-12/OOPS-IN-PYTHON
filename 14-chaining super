@@ -38,3 +38,33 @@ class Bank_v1:
         else:
             print('Insufficient balance.')
         print(f'Available balance: {self.cbal}')
+class Bank_v2(Bank_v1):
+    bank_branch = 'Bangalore'
+    bank_mobile=988874561
+
+    def __init__(self,na,a,ac,cb,cp,cm):
+        #super().__init__(na,a,ac,cb)
+        Bank_v1.__init__(self,na,a,ac,cb)
+        self.cpin=cp
+        self.cmobile=cm
+
+    def customer_details(self):
+        super().customer_details()
+        #Bank_v1.customer_details(self)
+        print(f'cmobile of the customer is { self.cmobile}')
+
+    def withdraw(self):
+        pin=self.get_int_value()
+        if pin==self.pin:
+           super().withdraw()
+           #Bank_v1.withdraw(self)
+        else:
+            print('invalid pin')
+    def deposite(self):
+        amount=self.get_int_value()
+        self.cbal+=amount
+        print('deposit is sucessfull')
+ankit=Bank_v2('ankit',30,87774,20000,1234,987654)
+#ankit.withdraw()
+ankit.bank_details()
+ankit.deposite()
