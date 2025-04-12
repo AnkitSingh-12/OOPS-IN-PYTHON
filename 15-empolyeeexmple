@@ -13,3 +13,9 @@ class Employee:
         Employee.Emp_count-=1
         print('emp is deleted')
 
+ankit=Employee('viccky','developer',33,10000)
+print(Employee.Emp_count)
+aryan=Employee('chomu','developer',44,10000)
+print(Employee.Emp_count)
+del ankit
+print(Employee.Emp_count)
