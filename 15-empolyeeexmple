@@ -9,3 +9,7 @@ class Employee:
         self.esal=es
 
         Employee.Emp_count+=1
+    def __del__(self):
+        Employee.Emp_count-=1
+        print('emp is deleted')
+
