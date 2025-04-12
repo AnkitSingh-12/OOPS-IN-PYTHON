@@ -1,1 +1,4 @@
-
+class Employee:
+    Company_name='ABC'
+    Company_location='Banglore'
+    Emp_count=0
