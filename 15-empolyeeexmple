@@ -2,3 +2,10 @@ class Employee:
     Company_name='ABC'
     Company_location='Banglore'
     Emp_count=0
+    def __init__(self,en,ej,ex,es):
+        self.ename=en
+        self.ejob=ej
+        self.experience=ex
+        self.esal=es
+
+        Employee.Emp_count+=1
