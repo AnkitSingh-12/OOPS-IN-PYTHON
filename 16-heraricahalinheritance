@@ -15,3 +15,20 @@ class Vehicle:
 
     def fuel_type(self):
         print("Generic fuel type")  # This will be overridden in child classes
+
+
+
+
+
+# Child class 1 - Car inherits from Vehicle
+class Car(Vehicle):  # Inheriting from Vehicle
+    def __init__(self, brand, model, seats):
+        super().__init__(brand, model)  # Call parent constructor
+        self.seats = seats
+
+    def vehicle_info(self):  # Overriding method
+        super().vehicle_info()  # Call parent method
+        print(f"Seats: {self.seats}")
+
+    def fuel_type(self):  # Overriding method
+        print("Car uses petrol or diesel")
