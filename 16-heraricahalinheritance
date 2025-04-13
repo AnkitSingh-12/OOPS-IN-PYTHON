@@ -1,1 +1,17 @@
 
+####### hericchal inheritance #######
+
+
+
+# Parent/base class
+class Vehicle:
+    def __init__(self, brand, model):
+        self.brand = brand
+        self.model = model
+
+    def vehicle_info(self):
+        print(f"Brand: {self.brand}")
+        print(f"Model: {self.model}")
+
+    def fuel_type(self):
+        print("Generic fuel type")  # This will be overridden in child classes
