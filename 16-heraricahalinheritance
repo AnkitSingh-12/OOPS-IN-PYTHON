@@ -29,3 +29,30 @@ class Car(Vehicle):  # Inheriting from Vehicle
 
     def fuel_type(self):  # Overriding method
         print("Car uses petrol or diesel")
+
+# Child class 2 - Bike inherits from Vehicle
+class Bike(Vehicle):  # Inheriting from Vehicle
+    def __init__(self, brand, model, engine_cc):
+        super().__init__(brand, model)
+        self.engine_cc = engine_cc
+
+    def vehicle_info(self):
+        super().vehicle_info()
+        print(f"Engine Capacity: {self.engine_cc}cc")
+
+    def fuel_type(self):
+        print("Bike uses petrol")
+
+
+
+car1 = Car("Toyota", "Innova", 7)
+bike1 = Bike("Yamaha", "R15", 155)
+
+print("\n-- Car Info --")
+car1.vehicle_info()
+car1.fuel_type()
+
+
+print("\n--Bike Info --")
+bike1.vehicle_info()
+bike1.fuel_type()
