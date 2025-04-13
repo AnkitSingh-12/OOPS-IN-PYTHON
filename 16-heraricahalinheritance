@@ -17,9 +17,6 @@ class Vehicle:
         print("Generic fuel type")  # This will be overridden in child classes
 
 
-
-
-
 # Child class 1 - Car inherits from Vehicle
 class Car(Vehicle):  # Inheriting from Vehicle
     def __init__(self, brand, model, seats):
