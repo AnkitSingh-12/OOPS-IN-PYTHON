@@ -1,1 +1,54 @@
 
+########## multiple inheritance #####
+
+
+
+# Base Class 1
+class Employee:
+    def __init__(self, emp_id, name):
+        self.emp_id = emp_id
+        self.name = name
+
+    def show_details(self):
+        print(f"Employee ID: {self.emp_id}")
+        print(f"Name: {self.name}")
+
+    def work(self):
+        print("Employee is working")
+
+# Base Class 2
+class GPS:
+    def __init__(self, location):
+        self.location = location
+
+    def show_location(self):
+        print(f"Current location: {self.location}")
+
+    def work(self):
+        print("GPS is tracking location")
+
+# Child Class (Multiple Inheritance)
+class DeliveryPartner(Employee, GPS):
+    def __init__(self, emp_id, name, location, vehicle):
+        # Chaining: call both parent constructors
+        Employee.__init__(self, emp_id, name)
+        GPS.__init__(self, location)
+        self.vehicle = vehicle
+
+    def show_details(self):
+        super().show_details()  # Chain from Employee
+        print(f"Vehicle: {self.vehicle}")
+        self.show_location()    # Chain from GPS
+
+    # Method Overriding (overrides both parents' 'work')
+    def work(self):
+        print("Delivery partner is picking up the order.")
+
+
+dp = DeliveryPartner(101, "Arjun", "Mumbai", "Bike")
+
+print("\n-- Delivery Partner Details --")
+dp.show_details()
+
+print("\n--- Work Status ---")
+dp.work()
