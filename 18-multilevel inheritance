@@ -11,3 +11,16 @@ class User:
 
     def access(self):
         print("User can browse food items.")  # Basic access rights
+
+#  Child Class (1st level) inherits from User
+class Order(User):
+    def __init__(self, name, items):
+        super().__init__(name)  # Chaining to parent (User)
+        self.items = items  # Storing list of items ordered
+
+    def get_details(self):
+        super().get_details()  # Calling parent's method
+        print(f"Ordered Items: {', '.join(self.items)}")  # Display ordered items
+
+    def access(self):  # Overriding parent's access method
+        print("User can place an order.")  # More access added
