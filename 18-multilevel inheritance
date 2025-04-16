@@ -1,1 +1,13 @@
+#########  multilevel inheritance #########
 
+
+#  Parent/Base Class
+class User:
+    def __init__(self, name):
+        self.name = name  # Storing user's name
+
+    def get_details(self):
+        print(f"User Name: {self.name}")  # Display user name
+
+    def access(self):
+        print("User can browse food items.")  # Basic access rights
