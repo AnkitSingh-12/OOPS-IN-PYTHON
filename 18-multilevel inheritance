@@ -24,3 +24,25 @@ class Order(User):
 
     def access(self):  # Overriding parent's access method
         print("User can place an order.")  # More access added
+
+# Child Class (2nd level) inherits from Order
+class OnlineOrder(Order):
+    def __init__(self, name, items, payment_method):
+        super().__init__(name, items)  # Chaining to Order class
+        self.payment_method = payment_method  # Storing payment method
+
+    def get_details(self):
+        super().get_details()  # Call parent method to reuse existing info
+        print(f"Payment Method: {self.payment_method}")  # Display payment method
+
+    def access(self):  # Overriding again
+        super().access()  # Call previous access method
+        print("User can track the order online.")  # Additional feature
+
+
+order1 = OnlineOrder("Ankit", ["Pizza", "Coke"], "UPI")
+print("\n--- Order Details ---")
+order1.get_details()
+
+print("\n--- Access Info ---")
+order1.access()
