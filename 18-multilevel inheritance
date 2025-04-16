@@ -12,6 +12,7 @@ class User:
     def access(self):
         print("User can browse food items.")  # Basic access rights
 
+
 #  Child Class (1st level) inherits from User
 class Order(User):
     def __init__(self, name, items):
@@ -24,6 +25,7 @@ class Order(User):
 
     def access(self):  # Overriding parent's access method
         print("User can place an order.")  # More access added
+
 
 # Child Class (2nd level) inherits from Order
 class OnlineOrder(Order):
@@ -46,3 +48,4 @@ order1.get_details()
 
 print("\n--- Access Info ---")
 order1.access()
+
