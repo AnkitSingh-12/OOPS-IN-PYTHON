@@ -1,0 +1,21 @@
+from abc import ABC,abstractmethod
+class MomTimeTable(ABC):
+    @abstractmethod
+    def breakfast(self):
+        pass
+    @abstractmethod
+    def lunch(self):
+        pass
+    @abstractmethod
+    def dinner(self):
+        pass
+class Harshad(MomTimeTable):
+    def lunch(self):
+        print('panner house with cold ')
+    def dinner(self):
+        print('teachers with tangri kabab')
+
+H=Harshad()
+H.breakfast()
+H.lunch()
+H.dinner()
