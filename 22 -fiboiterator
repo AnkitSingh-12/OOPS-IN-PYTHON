@@ -1,1 +1,18 @@
-22
+class   FibancciIterator:
+    def __init__(self,fv,sv,n):
+        self.first=fv
+        self.second=sv
+        self.noofvalue=n
+    def __iter__(self):
+        self.i=1
+        return self
+    def __next__(self):
+        if self.i<=self.noofvalue:
+           res=self.first
+           self.first,self.second=self.second,self.first+self.second
+           self.i+=1
+           return res
+        raise StopIteration
+FOI=FibancciIterator(2,3,10)
+for i in FOI:
+    print(i)
