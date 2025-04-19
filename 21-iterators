@@ -1,1 +1,19 @@
-
+class SquareIterator:
+    def __init__(self,st,ed,up=1):
+        self.start=st
+        self.end=ed
+        self.updation=up
+    def __iter__(self):
+        print('__iter__is called')
+        self.i=self.start
+        return self
+    def __next__(self):
+        print('__next__is called')
+        if self.i<self.end:
+            res=self.i**2
+            self.i+=self.updation
+            return res
+        raise StopIteration
+SOI=SquareIterator(1,5)
+for i in SOI:
+    print(i)
