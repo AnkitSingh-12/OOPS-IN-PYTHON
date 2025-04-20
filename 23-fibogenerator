@@ -1,0 +1,9 @@
+def fibogenerator(fv,sv,n):
+    i=1
+    while i<=n:
+        yield fv
+        fv,sv=sv,fv+sv
+        i+=1
+FBO=fibogenerator(2,3,5)
+for i in FBO:
+    print(i)
