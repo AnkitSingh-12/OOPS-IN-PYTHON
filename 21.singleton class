@@ -1,0 +1,33 @@
+def Singleton(arg):
+    L = []
+
+    def inner():
+        if len(L) == 0:
+            mco = arg()
+            L.append(mco)
+        return L[0]  
+
+    return inner
+@Singleton
+class Multiplex:
+    def __init__(self):
+        self.notice =100 
+    def booking(self, n):
+        if n <= self.notice:
+            self.notice -= n
+            print('Booking is successful')
+        else:
+            print('Insufficient tickets')
+
+    def available(self):
+        print(f'Available tickets: {self.notice}')
+           
+ankit = Multiplex()
+ankit.booking(30)
+ankit.available()
+
+aman = Multiplex()
+aman.booking(80)
+aman.available()
+
+print(ankit is aman)   
